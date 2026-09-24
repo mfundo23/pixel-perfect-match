@@ -150,11 +150,16 @@ function ChatInner() {
           className="gap-4"
         >
           {messages.length === 0 ? (
-            <ConversationEmptyState
-              title="How can I help with your work today?"
-              description="Ask anything, or start with one of these."
-            >
-              <div className="mt-4 flex flex-wrap justify-center gap-2">
+            <ConversationEmptyState>
+              <div className="space-y-1">
+                <h3 className="text-base font-semibold text-foreground">
+                  How can I help with your work today?
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Ask anything, or start with one of these.
+                </p>
+              </div>
+              <div className="mt-2 flex flex-wrap justify-center gap-2">
                 {QUICK_PROMPTS.map(({ label, starter }) => (
                   <Button
                     key={label}
